@@ -1,0 +1,13 @@
+<h3>Ajouter un ingrédient au cocktail <%= @cocktail.name %></h3>
+
+<%= simple_form_for([@cocktail, @dose]) do |f| %>
+  <%= f.error_notification %>
+  <%= f.input :description %>
+  <%= f.association :ingredient %>
+  <%= f.button :submit, class: "btn-primary" %>
+<% end %>
+
+<!-- pour le formulaire dose ajouter f.association :ingredient (à tester)-->
+
+
+<%= link_to "Retour au cocktail", cocktail_path(@cocktail) %>

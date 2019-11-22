@@ -8,6 +8,7 @@
 
 puts 'Cleaning database...'
 Ingredient.destroy_all
+Dose.destroy_all
 
 puts 'Creating ingredients...'
 
@@ -20,5 +21,7 @@ Ingredient.create(name: "vodka")
 Ingredient.create(name: "sugar")
 Ingredient.create(name: "martini")
 Ingredient.create(name: "champagne")
+Ingredient.create(name: "campari")
+Ingredient.create(name: "eau pétillante")
 
 puts 'Finished!'
